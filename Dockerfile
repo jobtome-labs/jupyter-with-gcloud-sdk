@@ -18,3 +18,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.
     rm -rf /var/lib/apt/lists/*
 
 USER $NB_USER
+
+COPY --chown=$NB_USER:$NB_USER requirements.txt requirements.txt
+
+RUN python -m pip install -r requirements.txt

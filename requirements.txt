@@ -1,0 +1,11 @@
+plotly==4.0.0
+ipywidgets==7.5.1
+widgetsnbextension==3.5.1
+pandas==1.0.1
+matplotlib==3.1.0
+numpy==1.16.4
+pymysql==0.9.3
+google-cloud-bigquery==1.20.0
+google-cloud-storage==1.23.0
+google-auth==1.14.0
+clickhouse-driver==0.1.0
