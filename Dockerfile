@@ -7,6 +7,11 @@ RUN apt-get update && \
     apt-transport-https \
     curl \
     ca-certificates \
+    gcc \
+    g++ \
+    build-essential \
+    python-dev \
+    python3-dev \
     gnupg && \
     rm -rf /var/lib/apt/lists/*
 
@@ -21,4 +26,7 @@ USER $NB_USER
 
 COPY requirements.txt requirements.txt
 
-RUN python -m pip install -r requirements.txt
+RUN pip install -r requirements.txt
+
+# we need to install fbprophet module after the others
+RUN pip install fbprophet==0.6
