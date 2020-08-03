@@ -12,7 +12,8 @@ RUN apt-get update && \
     build-essential \
     python-dev \
     python3-dev \
-    gnupg && \
+    gnupg \
+    graphviz &&\
     rm -rf /var/lib/apt/lists/*
 
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
