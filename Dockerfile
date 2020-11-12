@@ -29,5 +29,8 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
+RUN jupyter nbextension enable --py --sys-prefix qgrid
+RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
 # we need to install fbprophet module after the others
 RUN pip install fbprophet==0.6
